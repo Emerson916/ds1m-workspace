@@ -12,18 +12,20 @@ public class App {
 		// Determinar os dados da conta da Maria
 
 		contaDaMaria.numero = "100-85";
-		contaDaMaria.titular = "Maria Da Silva";
+		contaDaMaria.titular = "Maria Da Silva Constantino";
 		contaDaMaria.depositar(100);
 		contaDaMaria.tipo = "Corrente";
 		contaDaMaria.ativa = true;
+		contaDaMaria.chequeEspecial = 200;
 
 		// Determinar os dados da conta do João
 
 		contaDoJoao.numero = "200-96";
-		contaDoJoao.titular = "João Almeida";
+		contaDoJoao.titular = "João Almeida Frederico";
 		contaDoJoao.depositar(200);
 		contaDoJoao.tipo = "Poupança";
 		contaDoJoao.ativa = true;
+		contaDoJoao.chequeEspecial = 600;
 
 		// Ver os saldos das contas com o nome do titular
 
@@ -35,7 +37,7 @@ public class App {
 
 		// Colocar 100 reais na conta da Maria
 
-		contaDaMaria.depositar(58);
+		contaDaMaria.depositar(50);
 
 		// Ver os saldos das contas com o nome do titular
 
@@ -56,7 +58,28 @@ public class App {
 
 		System.out.println("Titular:" + contaDoJoao.titular);
 		contaDoJoao.mostrarSaldoDaConta();
+		
+		// Sacar saldo da conta 
+		
+		System.out.println("Titular:" + contaDaMaria.titular);
+		contaDaMaria.mostrarSaldoDaConta();
+		contaDaMaria.sacar(50);
+		contaDaMaria.mostrarSaldoDaConta();
+		contaDaMaria.sacar(500);
+		contaDaMaria.mostrarSaldoDaConta();
+		contaDaMaria.sacar(50);
+		contaDaMaria.mostrarSaldoDaConta();
+		contaDaMaria.sacar(80);
+		contaDaMaria.mostrarSaldoDaConta();
+		contaDaMaria.depositar(100);
+		contaDaMaria.mostrarSaldoDaConta();
+		
+		somar(10, 5);
 
 	}
 
+	public static int somar(int valor1, int valor2) {
+		int resultado = valor1 + valor2;
+		return resultado;
+	}
 }
